@@ -99,3 +99,88 @@ console.log(
   `18. The with() method returns a new string: ${question18}, meanwhile the original array is unaffected. 
 Original array: ${players}`
 );
+
+const numbers = [5, 8, 12, 20, 3];
+console.log("19.");
+numbers.forEach((number) => {
+  console.log(number);
+});
+
+let question20 = 0;
+numbers.forEach((number) => {
+  question20 += number;
+});
+console.log("20. The sum of the loops is " + question20);
+
+let question21 = numbers[0];
+numbers.forEach((number) => {
+  if (question21 < number) {
+    question21 = number;
+  }
+});
+console.log("21. The highest number in the array is: " + question21);
+
+/* const q21a = numbers.reduce((highestNumber, currentNumber) => {
+  if (currentNumber > highestNumber) return currentNumber;
+  return highestNumber;
+}, numbers[0]);
+console.log(q21a); */
+
+const doubledNumbers = [];
+numbers.forEach((number) => {
+  doubledNumbers.push(number * 2);
+});
+console.log("22. Array doubledNumbers: " + doubledNumbers);
+
+let question23 = 0;
+numbers.forEach((number) => {
+  question23 += number;
+});
+console.log(`23. The average value is ${question23 / numbers.length}`);
+
+const question24 = numbers.reduce((smallestNumber, currentNumber) => {
+  if (smallestNumber > currentNumber) return currentNumber;
+  return smallestNumber;
+}, numbers[0]);
+console.log("24. The smallest number is " + question24);
+
+const mixedNumbers = [3, -5, 12, -1, 8, -6];
+
+const positiveNumbers = [];
+mixedNumbers.forEach((number) => {
+  if (number > 0) {
+    positiveNumbers.push(number);
+  }
+});
+console.log("25. Array for positiveNumbers");
+console.log(positiveNumbers);
+
+console.log("26. Log positive number without using index.");
+mixedNumbers.forEach((number) => {
+  if (number > 0) {
+    console.log(number);
+  }
+});
+
+console.log("27.");
+let i = 0;
+while (i < numbers.length) {
+  if (numbers[i] <= 10) {
+    console.log(numbers[i]);
+  } else if (numbers[i] > 10) {
+    break;
+  }
+  i++;
+}
+
+console.log("28.");
+let i28 = 0;
+let negativeCount28 = 0;
+while (i28 < mixedNumbers.length) {
+  if (mixedNumbers[i28] < 0) {
+    negativeCount28++;
+    console.log(mixedNumbers[i28]);
+  }
+  i28++;
+}
+console.log(`28. There is ${negativeCount28} negative number in the array.`);
