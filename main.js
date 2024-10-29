@@ -101,6 +101,7 @@ Original array: ${players}`
 );
 
 const numbers = [5, 8, 12, 20, 3];
+
 console.log("19.");
 numbers.forEach((number) => {
   console.log(number);
@@ -174,13 +175,73 @@ while (i < numbers.length) {
 }
 
 console.log("28.");
-let i28 = 0;
+i = 0;
 let negativeCount28 = 0;
-while (i28 < mixedNumbers.length) {
-  if (mixedNumbers[i28] < 0) {
+while (i < mixedNumbers.length) {
+  if (mixedNumbers[i] < 0) {
     negativeCount28++;
-    console.log(mixedNumbers[i28]);
+    console.log(mixedNumbers[i]);
   }
-  i28++;
+  i++;
 }
 console.log(`28. There is ${negativeCount28} negative number in the array.`);
+
+const words = ["banana", "apple", "kiwi", "strawberry", "peach"];
+
+console.log("29. ");
+for (let i = 0; i < words.length; i++) {
+  console.log(words[i]);
+}
+
+const question30 = [];
+words.forEach((word) => {
+  question30.push(word.substr(0, 1));
+});
+console.log("30. " + question30);
+
+console.log("31. ");
+let question31Sum = 0;
+i = 0;
+while (question31Sum < 25) {
+  question31Sum += numbers[i];
+  console.log(numbers[i]);
+  i++;
+}
+
+let question32Sum = 0;
+mixedNumbers.forEach((number) => {
+  question32Sum += number;
+});
+console.log("32. The sum for mixedNumbers array is " + question32Sum);
+
+const temperaturesInCelsius = [15, 22, 19, 30, 28, 18, 25];
+
+const highestTemp = temperaturesInCelsius.reduce((highestTemp, currentTemp) => {
+  if (highestTemp < currentTemp) return currentTemp;
+  return highestTemp;
+}, temperaturesInCelsius[0]);
+
+console.log(
+  `33. The highest temperature is ${highestTemp} and its at index ${temperaturesInCelsius.indexOf(
+    highestTemp
+  )} of the array.`
+);
+
+let question34 = 0;
+words.forEach((word) => {
+  if (word.length > 5) {
+    question34++;
+  }
+});
+console.log(
+  "34. The number of words in words array that contains more than 5 words is " +
+    question34
+);
+
+console.log("35. ");
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 !== 0) {
+    console.log(numbers[i]);
+    break;
+  }
+}
