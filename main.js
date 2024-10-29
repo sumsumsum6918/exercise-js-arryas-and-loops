@@ -13,7 +13,8 @@ console.log(
 
 const question3 = names.splice(0, 0, "Figo");
 console.log(
-  `3. With splice(), to add "Figo" to the [0] place of the array while deleting nothing. The returned value is "${question3}" (empty) because nothing was deleted from the array.`
+  `3. With splice(), to add "Figo" to the [0] place of the array while deleting nothing. The returned value is "${question3}" (empty) because nothing was deleted from the array.
+Or with names[0] = "Figo" will give the same result but with no returned value.`
 );
 
 console.log("4. The return value of pop() is the deleted item: " + names.pop());
