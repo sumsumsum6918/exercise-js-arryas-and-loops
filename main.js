@@ -191,7 +191,7 @@ const words = ["banana", "apple", "kiwi", "strawberry", "peach"];
 
 console.log("29. ");
 for (let i = 0; i < words.length; i++) {
-  console.log(words[i]);
+  console.log("Word: " + words[i] + " Word length: " + words[i].length);
 }
 
 const question30 = [];
